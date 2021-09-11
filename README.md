@@ -1,2 +1,3 @@
-# pinus-ui-library
-UI Library of PINUS 
+# PINUS React.js UI Library 
+
+UI Components Library of PINUS 
