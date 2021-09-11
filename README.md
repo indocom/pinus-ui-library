@@ -1,2 +1,2 @@
-# pinus-ui-library-
+# pinus-ui-library
 UI Library of PINUS 
