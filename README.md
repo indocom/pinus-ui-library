@@ -6,16 +6,16 @@ The `npm` library package can be found at [https://www.npmjs.com/package/pinus-u
 
 ## Usage Setup
 
-To use the library, install the library using `npm` or `yarn`
+To use the library, install the library using `npm` or `yarn`, though `yarn` is preferred for PINUS projects for consistency purposes
 
-```
-npm i pinus-ui-library
-```
-
-or
-
-```
+```bash
 yarn add pinus-ui-library
+```
+
+After which, the necessary components can be imported using :
+
+```javascript
+import { Button, ... } from "pinus-ui-library";
 ```
 
 ## Development Setup
