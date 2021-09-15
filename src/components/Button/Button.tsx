@@ -7,17 +7,25 @@ export interface ButtonProps {
    */
   primary?: boolean;
   /**
-   * What background color to use
+   * What text color to use
    */
-  backgroundColor?: string;
+  labelColor?: string;
+  /**
+   * What background color to use. 
+   */
+  bgColor?: string;
   /**
    * How large should the button be?
    */
-  size?: "small" | "medium" | "large";
+  // size?: "small" | "medium" | "large";
   /**
    * Button contents
    */
   label: string;
+  /**
+   * Is this button disabled? 
+   */
+  disabled?: boolean;
   /**
    * Optional click handler
    */
@@ -29,9 +37,10 @@ export interface ButtonProps {
  */
 const Button = ({
   primary = false,
-  size = "medium",
-  backgroundColor,
+  // size = "medium",
+  bgColor,
   label,
+  labelColor,
   ...props
 }: ButtonProps) => {
   const mode = primary
@@ -40,10 +49,12 @@ const Button = ({
   return (
     <button
       type="button"
-      className={["storybook-button", `storybook-button--${size}`, mode].join(
+      className={["storybook-button",
+        // `storybook-button--${size}`,
+        mode].join(
         " "
       )}
-      style={{ backgroundColor }}
+      style={{ color: labelColor, backgroundColor: bgColor}}
       {...props}
     >
       {label}
