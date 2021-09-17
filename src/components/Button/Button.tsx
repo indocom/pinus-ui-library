@@ -5,7 +5,7 @@ export interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
    */
-  primary?: boolean;
+  variant: "primary" | "secondary";
   /**
    * What text color to use
    */
@@ -14,10 +14,6 @@ export interface ButtonProps {
    * What background color to use. 
    */
   bgColor?: string;
-  /**
-   * How large should the button be?
-   */
-  // size?: "small" | "medium" | "large";
   /**
    * Button contents
    */
@@ -36,24 +32,16 @@ export interface ButtonProps {
  * Primary UI component for user interaction
  */
 const Button = ({
-  primary = false,
-  // size = "medium",
+  variant = "primary",
   bgColor,
   label,
   labelColor,
   ...props
 }: ButtonProps) => {
-  const mode = primary
-    ? "storybook-button--primary"
-    : "storybook-button--secondary";
   return (
     <button
       type="button"
-      className={["storybook-button",
-        // `storybook-button--${size}`,
-        mode].join(
-        " "
-      )}
+      className={`button button--${variant}`}
       style={{ color: labelColor, backgroundColor: bgColor}}
       {...props}
     >
