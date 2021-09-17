@@ -7,13 +7,16 @@
 
     color: black;
 }
+
 .textarea--outlined {
     border: 0.1em solid gray;
 }
+
 .textarea--filled {
     border: 0.1em solid #eeeeee;
     background-color: #eeeeee;
 }
+
 .textarea:focus {
     outline: none !important;
     border: 0.25em solid #1E88E5;
