@@ -39,13 +39,12 @@ const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
       </div>
       <div>
         {user ? (
-          <Button size="small" onClick={onLogout} label="Log out" />
+          <Button onClick={onLogout} label="Log out" variant="primary" />
         ) : (
           <>
-            <Button size="small" onClick={onLogin} label="Log in" />
+            <Button onClick={onLogin} label="Log in" variant="primary" />
             <Button
-              primary
-              size="small"
+              variant="primary"
               onClick={onCreateAccount}
               label="Sign up"
             />
