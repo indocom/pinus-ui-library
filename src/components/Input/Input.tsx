@@ -23,11 +23,6 @@ export interface InputProps {
   name?: string;
 
   /**
-   * Pass a ref to the input element.
-   */
-  ref?: React.Ref<HTMLInputElement>;
-
-  /**
    * The value in the input element
    */
   value?: string;
@@ -64,8 +59,7 @@ const Input = ({
     <input
       className={`input input--${variant}`}
       {...props}
-    >
-    </input>
+    />
   );
 };
 

@@ -7,16 +7,16 @@
 
     color: black;
 }
+
 .input--outlined {
     border: 0.1em solid gray;
 }
+
 .input--filled {
     border: 0.1em solid #eeeeee;
-    border-bottom: 0.1em solid gray;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
     background-color: #eeeeee;
 }
+
 .input:focus {
     outline: none !important;
     border: 0.25em solid #1E88E5;
