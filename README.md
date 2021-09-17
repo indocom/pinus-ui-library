@@ -46,6 +46,12 @@ To bundle the library using rollup:
 yarn build
 ```
 
+To publish to Chromatic, which would be run automatically when there is a new push to branch `main`:
+
+```bash
+yarn chromatic
+```
+
 ## Learn More
 
 To learn more about the stack and libraries used, take a look at the following resources:
@@ -53,3 +59,4 @@ To learn more about the stack and libraries used, take a look at the following r
 1. [Rollup.js](https://rollupjs.org/guide/en/) - Used to bundle the library before being published
 2. [React.js](https://reactjs.org/) - Used to create the components
 3. [Storybook](https://storybook.js.org/docs) - Used to display the components in isolation and documentation
+4. [Chromatic](https://www.chromatic.com/docs) - Used to publish the storybook
