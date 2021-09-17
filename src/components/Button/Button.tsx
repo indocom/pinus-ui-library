@@ -5,19 +5,23 @@ export interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
    */
-  primary?: boolean;
+  variant: "primary" | "secondary";
   /**
-   * What background color to use
+   * What text color to use
    */
-  backgroundColor?: string;
+  labelColor?: string;
   /**
-   * How large should the button be?
+   * What background color to use. 
    */
-  size?: "small" | "medium" | "large";
+  bgColor?: string;
   /**
    * Button contents
    */
   label: string;
+  /**
+   * Is this button disabled? 
+   */
+  disabled?: boolean;
   /**
    * Optional click handler
    */
@@ -28,22 +32,17 @@ export interface ButtonProps {
  * Primary UI component for user interaction
  */
 const Button = ({
-  primary = false,
-  size = "medium",
-  backgroundColor,
+  variant = "primary",
+  bgColor,
   label,
+  labelColor,
   ...props
 }: ButtonProps) => {
-  const mode = primary
-    ? "storybook-button--primary"
-    : "storybook-button--secondary";
   return (
     <button
       type="button"
-      className={["storybook-button", `storybook-button--${size}`, mode].join(
-        " "
-      )}
-      style={{ backgroundColor }}
+      className={`button button--${variant}`}
+      style={{ color: labelColor, backgroundColor: bgColor}}
       {...props}
     >
       {label}
