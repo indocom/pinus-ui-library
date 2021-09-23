@@ -28,6 +28,8 @@ export interface ContentCardProps {
    * Alt text for image. Compulsory field if image field is present
    */
   imgAlt?: string;
+
+  drawBorder?: boolean;
 }
 
 const ContentCard = ({
@@ -35,7 +37,8 @@ const ContentCard = ({
   imgAlt,
   title,
   description,
-  hyperlink
+  hyperlink,
+  drawBorder = false
 }: ContentCardProps) => {
   return (
     <div className={'contentCard'}>
