@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import Dropdown, { DropdownProps } from "./Dropdown";
+import Dropdown, { Option } from "./Dropdown";
 
 export default {
   title: "Dropdown",
@@ -12,7 +12,32 @@ const Template: ComponentStory<typeof Dropdown> = (args) => (
   <Dropdown {...args} />
 );
 
-export const Basic = Template.bind({});
-Basic.args = {
-  variant: "primary",
+const optionsStub: Option[] = [
+  {
+    value: "firstLabel",
+    label: "Hello World",
+  },
+  {
+    value: "secondLabel",
+    label: "Hello C++",
+  },
+  {
+    value: "thirdLabel",
+    label: "Hello Python",
+  },
+];
+
+const placeholder = "default placeholder";
+
+export const Single = Template.bind({});
+Single.args = {
+  options: optionsStub,
+  placeholder: placeholder,
+};
+
+export const Multi = Template.bind({});
+Multi.args = {
+  options: optionsStub,
+  placeholder: placeholder,
+  isMulti: true,
 };
