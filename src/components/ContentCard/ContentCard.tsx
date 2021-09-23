@@ -29,6 +29,11 @@ export interface ContentCardProps {
    */
   imgAlt?: string;
 
+  /**
+   * Relative path to bgImage 
+   */
+  bgImage?: string;
+
   drawBorder?: boolean;
 }
 
@@ -38,10 +43,14 @@ const ContentCard = ({
   title,
   description,
   hyperlink,
+  bgImage,
   drawBorder = false
 }: ContentCardProps) => {
   return (
-    <div className={'contentCard'}>
+    <div
+    className={'contentCard'}
+    style={{backgroundImage: `url(${bgImage})`}}
+    >
       <div className={'image'}>
       {
         image
@@ -56,7 +65,7 @@ const ContentCard = ({
         {description}
       </div>
       <div className={'hyperlink'}>
-        <a href={hyperlink}>Read More!</a>
+        <a href={hyperlink}>{"Read More >>>"}</a>
       </div>
     </div>
   )
