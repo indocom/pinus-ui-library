@@ -17,5 +17,4 @@ base.args = {
     description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias totam ipsa, in atque incidunt, error praesentium expedita eaque ratione inventore ab fugiat ad modi distinctio. Soluta provident maxime nisi ipsa.",
     hyperlink: "https://www.google.com",
     image: "https://cdn.pixabay.com/photo/2019/03/29/00/15/love-4088337_960_720.jpg",
-    bgImage: "https://media.istockphoto.com/photos/cream-background-with-a-soft-horizontal-texture-very-large-for-picture-id1024646794?k=20&m=1024646794&s=170667a&w=0&h=hN4-jKPkyY3ABorzq4WAXYDkaMGrEXlWWATiaQ0zr-g="
 };
