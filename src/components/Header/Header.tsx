@@ -1,6 +1,7 @@
 import React from "react";
 
 import Button from "../Button";
+import "../global.styles.css";
 import "./header.css";
 
 type header = {
