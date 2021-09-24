@@ -1,6 +1,7 @@
 import React from "react";
 import Select, { ActionMeta, StylesConfig, ValueType } from "react-select";
 import { customStyles } from "./dropdown.styles";
+import "../global.styles.css";
 
 export type Option = {
   value: string;
