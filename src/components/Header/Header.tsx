@@ -62,9 +62,8 @@ const Header = ({
         <h1>{headerTitle}</h1>
       </div>
       <div className="header">
-        {headers.map((header) => (
-          <a href={header.url}>{header.label}</a>
-        ))}
+        {headers &&
+          headers.map((header) => <a href={header.url}>{header.label}</a>)}
       </div>
       <div className="login">
         {isLoginSupported ? (
