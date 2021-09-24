@@ -48,10 +48,6 @@ export interface TextProps {
    * Font style of the text eg: italics or normal
    */
   fontStyle?: "italic" | "normal";
-  /**
-   * Text to be displayed
-   */
-  text?: string;
 }
 
 const Text: React.FC<TextProps> = ({
@@ -61,14 +57,14 @@ const Text: React.FC<TextProps> = ({
   decoration,
   color = "#212121",
   fontStyle = "normal",
-  text,
+  ...props
 }) => {
   return (
     <p
       style={{ color: color }}
       className={`text text--${fontSize} text--${fontWeight} text--${overflow} text--${decoration} text--${fontStyle}`}
     >
-      {text}
+      {props.children}
     </p>
   );
 };
