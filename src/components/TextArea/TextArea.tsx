@@ -1,6 +1,6 @@
-import React, { HTMLInputTypeAttribute } from "react";
+import React from "react";
 import "./textarea.css";
-
+import "../global.styles.css";
 export interface TextAreaProps {
   /**
    * The id of the textarea element. Use this prop to make value and placeholder accessible for screen readers.
@@ -10,7 +10,7 @@ export interface TextAreaProps {
   /**
    *  It comes with two variants: outlined (default) and filled
    */
-  variant?: "outlined" | "filled"
+  variant?: "outlined" | "filled";
 
   /**
    * Name attribute of the textarea element.
@@ -40,35 +40,30 @@ export interface TextAreaProps {
   /**
    * Callback fired when the value is changed
    */
-  onChange?: (
-    event: React.ChangeEvent<HTMLTextAreaElement>
-  ) => void;
+  onChange?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
 
   /**
    * Callback fired when the textarea element goes out of focus
    */
-  onBlur?: (
-    event: React.FocusEvent<HTMLTextAreaElement>
-  ) => void;
+  onBlur?: (event: React.FocusEvent<HTMLTextAreaElement>) => void;
 }
 
 /**
  * UI component for user input. Note that a text area component by definition is a multi-line field. Use input component for
  * single-line data entry
  */
- const TextArea = ({
-    variant = "outlined",
-    numRows = 3,
-    ...props
-  }: TextAreaProps) => {
-    return (
-      <textarea
-        className={`textarea textarea--${variant}`}
-        rows={numRows}
-        {...props}
-      >
-      </textarea>
-    );
-  };
+const TextArea = ({
+  variant = "outlined",
+  numRows = 3,
+  ...props
+}: TextAreaProps) => {
+  return (
+    <textarea
+      className={`textarea textarea--${variant}`}
+      rows={numRows}
+      {...props}
+    ></textarea>
+  );
+};
 
-  export default TextArea;
+export default TextArea;

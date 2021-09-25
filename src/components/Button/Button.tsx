@@ -1,6 +1,6 @@
 import React from "react";
 import "./button.css";
-
+import "../global.styles.css";
 export interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
@@ -11,7 +11,7 @@ export interface ButtonProps {
    */
   labelColor?: string;
   /**
-   * What background color to use. 
+   * What background color to use.
    */
   bgColor?: string;
   /**
@@ -19,7 +19,7 @@ export interface ButtonProps {
    */
   label: string;
   /**
-   * Is this button disabled? 
+   * Is this button disabled?
    */
   disabled?: boolean;
   /**
@@ -42,7 +42,7 @@ const Button = ({
     <button
       type="button"
       className={`button button--${variant}`}
-      style={{ color: labelColor, backgroundColor: bgColor}}
+      style={{ color: labelColor, backgroundColor: bgColor }}
       {...props}
     >
       {label}
