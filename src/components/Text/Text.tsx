@@ -45,9 +45,9 @@ export interface TextProps {
    */
   color?: string;
   /**
-   * Font style of the text eg: italics or normal
+   * Font style of the text eg: italics or no-italic
    */
-  fontStyle?: "italic" | "normal";
+  fontStyle?: "italic" | "no-italic";
 }
 
 const Text: React.FC<TextProps> = ({
@@ -56,7 +56,7 @@ const Text: React.FC<TextProps> = ({
   overflow,
   decoration,
   color = "#212121",
-  fontStyle = "normal",
+  fontStyle,
   ...props
 }) => {
   return (
