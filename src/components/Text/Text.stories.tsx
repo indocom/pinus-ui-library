@@ -11,23 +11,27 @@ export default {
   },
 } as ComponentMeta<typeof Text>;
 
-const Template: ComponentStory<typeof Text> = (args) => (
-  <Text {...args}>Hello</Text>
-);
+const Template: ComponentStory<typeof Text> = (args) => <Text {...args} />;
 
 export const Default = Template.bind({});
+Default.args = {
+  children: "Hello",
+};
 
 export const StrikeThrough = Template.bind({});
 StrikeThrough.args = {
   decoration: "line-through",
+  children: "Hello",
 };
 
 export const UnderLine = Template.bind({});
 UnderLine.args = {
   decoration: "underline",
+  children: "Hello",
 };
 
 export const Italics = Template.bind({});
 Italics.args = {
   fontStyle: "italic",
+  children: "Hello",
 };
