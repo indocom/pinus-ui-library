@@ -6,6 +6,9 @@
 
     background-repeat: no-repeat;
     background-size: cover;
+
+    border: 1px;
+    border-radius: 0.5rem;
 }
 
 .image {

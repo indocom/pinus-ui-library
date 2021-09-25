@@ -41,7 +41,7 @@ const ContentCard = ({
   title,
   description,
   hyperlink,
-  bgImage = "https://s3-alpha-sig.figma.com/img/aa72/b9ba/53f9dabfd21abc03530e48560fda34ff?Expires=1633305600&Signature=heE79KnIoD2XyIgfEeuRmc8pzNpUksixuPz8P1kOdiRiM-UbZCJdEInLD5GhxHwx8K6rObeWLTrI80v9w-JXhGeuje~jWBwrs4We~Hg4RBJyVvYqU7fh9Tr6r4U2EGsoYoiM1rPDWFaggDOCiHhK1YKhVPTACslKEW4xRST-hj50F64077PGeMMTcqlMSI3vDm4MWmP5Jw16Gm7R3QJlZ4baqP6lwQbCUP-LYnU1VI1ec3NhUVN1MwoOV5PfgDuVffSyuLNPlvuPuULkJW5TKeoWyXKclYFGpQZ8IKoySLlvyIPxxoi8mgkTiVKmoJtqyZzhDYTHp8SLQMO7K7zXkg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+  bgImage = "https://www.publicdomainpictures.net/pictures/210000/nahled/paper-texture-crean-background.jpg",
 }: ContentCardProps) => {
   return (
     <div
