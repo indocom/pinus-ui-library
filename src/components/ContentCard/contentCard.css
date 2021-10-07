@@ -120,6 +120,6 @@ a:hover {
 /* 2xl-min: */
 @media screen and (min-width: 1536px) {
     .description {
-        max-height: 6rem;
+        max-height: 10rem;
     }
 }

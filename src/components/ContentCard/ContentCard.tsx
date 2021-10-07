@@ -1,8 +1,6 @@
 import React from "react";
 import "./contentCard.css";
 
-// TODO: support variant
-
 export interface ContentCardProps {
   /**
    * Title of ContentCard
