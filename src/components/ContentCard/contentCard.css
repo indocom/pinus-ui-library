@@ -1,0 +1,125 @@
+.contentCard {
+    display: flex;
+    flex-flow: column;
+    max-width: 20rem;
+    justify-content: flex-start;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border: 1px;
+    border-radius: 0.5rem;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    padding-bottom: 1.5rem;
+}
+
+img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: fit;
+}
+
+.title {
+    /* To be replaced with appropriate component */
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.description {
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+    text-justify: newspaper;
+}
+
+.hyperlink {
+    display: flex;
+    justify-content: end;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+a, a:link, a:visited{
+    color: #FF3B3A;
+    text-decoration: underline;
+
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/* sm-min */
+@media screen and (min-width: 640px) {
+    .contentCard {
+        max-width: 20rem;
+    }
+    
+}
+/* md-min */
+@media screen and (min-width: 768px) {
+    .contentCard {
+        max-width: 28rem;
+    }    
+}
+
+/* lg-min */
+@media screen and (min-width: 1024px) {
+    .contentCard {
+        height: auto;
+    }
+    
+    .image {
+        max-width: 32rem;
+    }
+
+    .title {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    .description {
+        padding-top: 0rem;
+        margin-top: 0.5rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        max-height: 9rem;
+    }
+
+    .hyperlink {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+    
+}
+
+/* xl-min */
+@media screen and (min-width: 1280px) {
+    .contentCard {
+        padding-bottom: 2rem;
+    }
+}
+
+/* 2xl-min: */
+@media screen and (min-width: 1536px) {
+    .description {
+        max-height: 10rem;
+    }
+}
