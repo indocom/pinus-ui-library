@@ -1,54 +1,79 @@
 import React from "react";
 
 import Button from "../Button";
+import "../global.styles.css";
 import "./header.css";
 
+type header = {
+  label: string;
+  url: string;
+};
 export interface HeaderProps {
-  user?: {};
-  onLogin: () => void;
-  onLogout: () => void;
-  onCreateAccount: () => void;
+  /**
+   * Path to the logo image (image would be compressed to 32px x 32px logo)
+   */
+  logoPath?: string;
+
+  /**
+   * Header title
+   */
+  headerTitle: string;
+
+  /**
+   * list of headers including label and url when being clicked,
+   * recommended up to 5 headers for small laptop as otherwise the text would be like a paragraph
+   */
+  headers: header[];
+
+  /**
+   * If login is supported
+   */
+  isLoginSupported: boolean;
+
+  /**
+   * User to be supplied in any format
+   */
+  user?: any;
+
+  /**
+   * Action to be performed when log in button is pressed
+   */
+  onLogin?: () => void;
+
+  /**
+   * Action to be performed when log out button is pressed
+   */
+  onLogout?: () => void;
 }
 
-const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
+const Header = ({
+  logoPath,
+  headerTitle,
+  user,
+  headers,
+  onLogin,
+  onLogout,
+  isLoginSupported = false,
+}: HeaderProps) => (
   <header>
     <div className="wrapper">
-      <div>
-        <svg
-          width="32"
-          height="32"
-          viewBox="0 0 32 32"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g fill="none" fillRule="evenodd">
-            <path
-              d="M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z"
-              fill="#FFF"
-            />
-            <path
-              d="M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z"
-              fill="#555AB9"
-            />
-            <path
-              d="M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z"
-              fill="#91BAF8"
-            />
-          </g>
-        </svg>
-        <h1>Acme</h1>
+      <div className="title">
+        <img width="32" height="32" src={logoPath} />
+        <h1>{headerTitle}</h1>
       </div>
-      <div>
-        {user ? (
-          <Button onClick={onLogout} label="Log out" variant="primary" />
-        ) : (
-          <>
+      <div className="header">
+        {headers &&
+          headers.map((header) => <a href={header.url}>{header.label}</a>)}
+      </div>
+      <div className="login">
+        {isLoginSupported ? (
+          user ? (
+            <Button onClick={onLogout} label="Log out" variant="primary" />
+          ) : (
             <Button onClick={onLogin} label="Log in" variant="primary" />
-            <Button
-              variant="primary"
-              onClick={onCreateAccount}
-              label="Sign up"
-            />
-          </>
+          )
+        ) : (
+          <></>
         )}
       </div>
     </div>
