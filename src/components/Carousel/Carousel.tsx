@@ -1,10 +1,13 @@
-import React, {CSSProperties} from "react";
+import React from "react";
 import {Carousel as ReactCarousel}  from 'react-responsive-carousel';
+import { arrowStyles, indicatorStyles, arrow, left, right} from "./myCarouselCSS";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import "./myCarousel.css";
 
 export interface CarouselProps {
+  /**
+   * List of URLs to the images to be shown
+   */
   imgList: string[];
 
   /**
@@ -27,14 +30,37 @@ const Carousel = ({
   imgList
 }: CarouselProps) => {
 
-  const indicatorStyles: CSSProperties = {
-    background: "#000",
-    display: "inline-block",
-    width: "8px",
-    height:"8px",
-    margin: "0 8px",
-    listStyle: "circle"
-  };
+  const prevArrow = (
+    onClickHandler: React.MouseEventHandler<HTMLButtonElement>,
+    hasPrev: boolean, 
+    label: string
+  ) => {
+    return hasPrev && 
+    <button
+      type="button"
+      onClick={onClickHandler}
+      title={label}
+      style={{ ...arrowStyles, left: 15 }}
+    >
+      <i style={{...arrow, ...left}}/>
+    </button>
+  }
+
+  const nextArrow = (
+    onClickHandler: React.MouseEventHandler<HTMLButtonElement>,
+    hasNext: boolean, 
+    label: string
+  ) => {
+    return hasNext && 
+    <button
+      type="button"
+      onClick={onClickHandler}
+      title={label}
+      style={{ ...arrowStyles, right: 15 }}
+    >
+      <i style={{...arrow, ...right}}/>
+    </button>
+  }
 
   const indicator = (
     onClickHandler: React.MouseEventHandler<HTMLLIElement>,
@@ -44,7 +70,7 @@ const Carousel = ({
     return isSelected
     ? (
       <li
-        style = {{...indicatorStyles, background: "#fff"}}
+        style = {{...indicatorStyles, background: "#FF1313"}}
         aria-label={`Selected: ${label} ${index + 1}`}
         title={`Selected: ${label} ${index + 1}`}
       />
@@ -69,12 +95,12 @@ const Carousel = ({
       infiniteLoop
       swipeable
       emulateTouch
-      centerMode
       
       interval={interval}
       transitionTime={transitionTime}
-      showArrows={false}
       showThumbs={false}
+      renderArrowPrev={prevArrow}
+      renderArrowNext={nextArrow}
       renderIndicator={indicator}
       >
         {imgList.map((src, id) => {
