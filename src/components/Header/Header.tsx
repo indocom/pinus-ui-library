@@ -3,6 +3,7 @@ import React from "react";
 import Button from "../Button";
 import "../global.styles.css";
 import "./header.css";
+import logo from "./pinus.png";
 
 type header = {
   label: string;
@@ -57,8 +58,8 @@ const Header = ({
 }: HeaderProps) => (
   <header>
     <div className="wrapper">
+      <img width="32" height="32" src={logoPath ? logoPath : logo} />
       <div className="title">
-        <img width="32" height="32" src={logoPath} />
         <h1>{headerTitle}</h1>
       </div>
       <div className="header">

@@ -11,9 +11,6 @@ export default {
 
 const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />;
 
-const logoPath =
-  "https://images.fastcompany.net/image/upload/w_596,c_limit,q_auto:best,f_auto/fc/3034007-inline-i-applelogo.jpg";
-
 const title = "PINUS";
 const headers = [
   {
@@ -40,14 +37,12 @@ const headers = [
 
 export const Vanilla = Template.bind({});
 Vanilla.args = {
-  logoPath: logoPath,
   headerTitle: title,
   headers: headers,
 };
 
 export const LoggedIn = Template.bind({});
 LoggedIn.args = {
-  logoPath: logoPath,
   headerTitle: title,
   headers: headers,
   user: {},
@@ -56,7 +51,6 @@ LoggedIn.args = {
 
 export const LoggedOut = Template.bind({});
 LoggedOut.args = {
-  logoPath: logoPath,
   headerTitle: title,
   headers: headers,
   isLoginSupported: true,
