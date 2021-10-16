@@ -3,7 +3,7 @@ import React from "react";
 import Button from "../Button";
 import "../global.styles.css";
 import "./header.css";
-import logo from "./pinus.png";
+import logo from "../../images/pinus.png";
 
 type header = {
   label: string;

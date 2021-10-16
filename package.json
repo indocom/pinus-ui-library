@@ -40,7 +40,8 @@
   },
   "dependencies": {
     "react-responsive-carousel": "^3.2.21",
-    "react-select": "^4.3.1"
+    "react-select": "^4.3.1",
+    "rollup-plugin-img": "^1.1.0"
   },
   "scripts": {
     "build": "rollup -c",
