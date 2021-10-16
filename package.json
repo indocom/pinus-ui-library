@@ -1,6 +1,6 @@
 {
   "name": "pinus-ui-library",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "PINUS UI Library",
   "repository": "git@github.com:indocom/pinus-ui-library.git",
   "author": "simonjulianl <simonjulian21@gmail.com>",
@@ -39,8 +39,8 @@
     "react-dom": "^17.0.2"
   },
   "dependencies": {
-    "react-select": "^4.3.1",
-    "react-responsive-carousel": "^3.2.21"
+    "react-responsive-carousel": "^3.2.21",
+    "react-select": "^4.3.1"
   },
   "scripts": {
     "build": "rollup -c",
