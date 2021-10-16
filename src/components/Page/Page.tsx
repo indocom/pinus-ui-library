@@ -10,15 +10,8 @@ export interface PageProps {
   onCreateAccount: () => void;
 }
 
-const Page = ({ user, onLogin, onLogout, onCreateAccount }: PageProps) => (
+const Page = ({}: PageProps) => (
   <article>
-    <Header
-      user={user}
-      onLogin={onLogin}
-      onLogout={onLogout}
-      onCreateAccount={onCreateAccount}
-    />
-
     <section>
       <h2>Pages in Storybook</h2>
       <p>
