@@ -32,6 +32,21 @@ Install all dependencies using:
 yarn install
 ```
 
+NOTE: This library is in Alpha stage. To try out changes, execute the following:
+
+```bash
+yarn build
+yarn link
+```
+
+Then in the (other) project that makes use of this library, do the following:
+
+```bash
+yarn link pinus-ui-library
+```
+
+Subsequently, only run `yarn build` for pinus-ui-library. That is, there is no need to do the linking process again
+
 ## Available Scripts
 
 To run the storybook:
