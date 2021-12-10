@@ -28,6 +28,19 @@ h1 {
   min-width: 60%;
 }
 
+.logoAndTitle {
+  justify-content: space-between;
+  display: flex;
+}
+
+.logoAndTitleWrapper {
+  display:"block";
+}
+
+.wrapper > a {
+  color: black;
+}
+
 .header > a {
   color: white;
 }

@@ -21,6 +21,11 @@ export interface HeaderProps {
   headerTitle: string;
 
   /**
+   * Home Link
+   */
+   homeLink: string;
+
+  /**
    * list of headers including label and url when being clicked,
    * recommended up to 5 headers for small laptop as otherwise the text would be like a paragraph
    */
@@ -52,16 +57,21 @@ const Header = ({
   headerTitle,
   user,
   headers,
+  homeLink,
   onLogin,
   onLogout,
   isLoginSupported = false,
 }: HeaderProps) => (
   <header>
     <div className="wrapper">
-      <img width="32" height="32" src={logoPath ? logoPath : logo} />
-      <div className="title">
-        <h1>{headerTitle}</h1>
-      </div>
+      <a className="logoAndTitleWrapper" href={homeLink}>
+        <div className="logoAndTitle">
+          <img width="32" height="32" src={logoPath ? logoPath : logo} />
+          <div className="title">
+            <h1>{headerTitle}</h1>
+          </div>
+        </div>
+      </a>
       <div className="header">
         {headers &&
           headers.map((header) => <a href={header.url}>{header.label}</a>)}
