@@ -1,8 +1,12 @@
+header {
+  width: 100%;
+}
+
 .wrapper {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 15px 20px;
   display: flex;
   align-items: center;
+  width: 100%;
   justify-content: space-between;
   min-width: 800px;
   background-color: transparent;
@@ -26,6 +30,9 @@ h1 {
 
 .header {
   min-width: 60%;
+  justify-content: right;
+  justify-items: right;
+  text-align: end;
 }
 
 .logoAndTitle {
@@ -35,13 +42,10 @@ h1 {
 
 .logoAndTitleWrapper {
   display:"block";
+  justify-content: left;
 }
 
-.wrapper > a {
-  color: black;
-}
-
-.header > a {
+.header > a, .wrapper > a {
   color: white;
 }
 
