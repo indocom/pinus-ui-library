@@ -28,6 +28,6 @@ h1 {
   min-width: 60%;
 }
 
-a + a {
+Header > a + a {
   margin-left: 30px;
 }
