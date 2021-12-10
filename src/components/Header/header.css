@@ -28,6 +28,15 @@ h1 {
   min-width: 60%;
 }
 
-Header > a + a {
+.header > a {
+  color: white;
+}
+
+.header > a:hover {
+  color: red;
+  transition: 0.3s;
+}
+
+.header > a + a {
   margin-left: 30px;
 }

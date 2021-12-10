@@ -55,13 +55,12 @@ img {
     margin-right: 1rem;
 }
 
-ContentCard > a:visited{
+.hyperlink > a:visited{
     color: #FF3B3A;
     text-decoration: underline;
-
 }
 
-ContentCard > a:hover {
+.hyperlink > a:hover {
     color: red;
     text-decoration: underline;
 }
