@@ -4,9 +4,10 @@ import Button from "../Button";
 import "../global.styles.css";
 import "./header.css";
 import logo from "../../images/pinus.png";
+import Text from "../Text";
 
 type header = {
-  label: string;
+  label: JSX.Element;
   url: string;
 };
 export interface HeaderProps {
@@ -18,7 +19,7 @@ export interface HeaderProps {
   /**
    * Header title
    */
-  headerTitle: string;
+  headerTitle: JSX.Element;
 
   /**
    * Home Link
@@ -66,9 +67,9 @@ const Header = ({
     <div className="wrapper">
       <a className="logoAndTitleWrapper" href={homeLink}>
         <div className="logoAndTitle">
-          <img width="32" height="32" src={logoPath ? logoPath : logo} />
+          <img src={logoPath ? logoPath : logo} />
           <div className="title">
-            <h1>{headerTitle}</h1>
+            {headerTitle}
           </div>
         </div>
       </a>

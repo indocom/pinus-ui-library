@@ -12,20 +12,11 @@ header {
   background-color: transparent;
 }
 
-h1 {
-  font-weight: 900;
-  font-size: 20px;
-  line-height: 1;
-  margin: 6px 0 6px 10px;
-  display: inline-block;
-  vertical-align: top;
-  padding-bottom: 10px;
-}
-
 .title {
   min-width: 150px;
   overflow: hidden;
   white-space: nowrap;
+  margin: 0 0 0 10px;
 }
 
 .header {
@@ -40,17 +31,24 @@ h1 {
   display: flex;
 }
 
+.logoAndTitle > img {
+  width:auto;
+  height:100%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .logoAndTitleWrapper {
   display:"block";
   justify-content: left;
 }
 
-.header > a, .wrapper > a {
-  color: white;
+.header > a > p {
+  display: inline;
 }
 
-.header > a:hover {
-  color: red;
+.header > a > p:hover {
+  color: red !important;
   transition: 0.3s;
 }
 

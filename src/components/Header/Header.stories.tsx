@@ -3,6 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import "../global.styles.css";
 import Header from "./Header";
+import Text from "../Text";
 
 export default {
   title: "Header",
@@ -11,27 +12,27 @@ export default {
 
 const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />;
 
-const title = "PINUS";
+const title = <Text fontWeight="bold" fontSize="4xl">PINUS</Text>;
 const homeLink = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 const headers = [
   {
-    label: "home",
+    label: <Text> home </Text>,
     url: "https://google.com",
   },
   {
-    label: "events",
+    label: <Text> events </Text>,
     url: "https://google.com",
   },
   {
-    label: "about us",
+    label: <Text> about us </Text>,
     url: "https://google.com",
   },
   {
-    label: "another header",
+    label: <Text> another header </Text>,
     url: "https://google.com",
   },
   {
-    label: "very very long header",
+    label: <Text> very very long header </Text>,
     url: "https://google.com",
   },
 ];
