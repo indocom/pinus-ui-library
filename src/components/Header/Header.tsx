@@ -4,9 +4,10 @@ import Button from "../Button";
 import "../global.styles.css";
 import "./header.css";
 import logo from "../../images/pinus.png";
+import Text from "../Text";
 
 type header = {
-  label: string;
+  label: JSX.Element;
   url: string;
 };
 export interface HeaderProps {
@@ -18,7 +19,12 @@ export interface HeaderProps {
   /**
    * Header title
    */
-  headerTitle: string;
+  headerTitle: JSX.Element;
+
+  /**
+   * Home Link
+   */
+   homeLink: string;
 
   /**
    * list of headers including label and url when being clicked,
@@ -52,16 +58,21 @@ const Header = ({
   headerTitle,
   user,
   headers,
+  homeLink,
   onLogin,
   onLogout,
   isLoginSupported = false,
 }: HeaderProps) => (
   <header>
     <div className="wrapper">
-      <img width="32" height="32" src={logoPath ? logoPath : logo} />
-      <div className="title">
-        <h1>{headerTitle}</h1>
-      </div>
+      <a className="logoAndTitleWrapper" href={homeLink}>
+        <div className="logoAndTitle">
+          <img src={logoPath ? logoPath : logo} />
+          <div className="title">
+            {headerTitle}
+          </div>
+        </div>
+      </a>
       <div className="header">
         {headers &&
           headers.map((header) => <a href={header.url}>{header.label}</a>)}

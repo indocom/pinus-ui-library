@@ -46,6 +46,11 @@ export interface TextAreaProps {
    * Callback fired when the textarea element goes out of focus
    */
   onBlur?: (event: React.FocusEvent<HTMLTextAreaElement>) => void;
+
+  /**
+   * Indicate whether the input is mandatory or not
+   */
+   isRequired?: boolean;
 }
 
 /**
@@ -55,6 +60,7 @@ export interface TextAreaProps {
 const TextArea = ({
   variant = "outlined",
   numRows = 3,
+  isRequired = false,
   ...props
 }: TextAreaProps) => {
   return (
@@ -62,6 +68,7 @@ const TextArea = ({
       className={`textarea textarea--${variant}`}
       rows={numRows}
       {...props}
+      required={isRequired}
     ></textarea>
   );
 };
