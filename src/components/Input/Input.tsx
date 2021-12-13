@@ -41,14 +41,19 @@ export interface InputProps {
    * Callback fired when the input element goes out of focus
    */
   onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
+
+  /**
+   * Indicate whether the input is mandatory or not
+   */
+   isRequired?: boolean;
 }
 
 /**
  * Primary UI component for user input. Note that an input component by definition is a one-line field. Use textarea component for
  * multi-line data entry
  */
-const Input = ({ variant = "outlined", ...props }: InputProps) => {
-  return <input className={`input input--${variant}`} {...props} />;
+const Input = ({ variant = "outlined", isRequired = false, ...props }: InputProps) => {
+  return <input className={`input input--${variant}`} {...props} required={isRequired}/>;
 };
 
 export default Input;
