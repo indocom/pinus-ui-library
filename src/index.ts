@@ -6,9 +6,11 @@ import ContentCard from "./components/ContentCard";
 import Input from "./components/Input";
 import Text from "./components/Text";
 import TextArea from "./components/TextArea";
+import Banner from "./components/Banner";
 
 export {
   Button,
+  Banner,
   Header,
   Dropdown,
   Carousel,

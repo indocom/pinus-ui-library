@@ -77,17 +77,13 @@ const Header = ({
         {headers &&
           headers.map((header) => <a href={header.url}>{header.label}</a>)}
       </div>
-      <div className="login">
-        {isLoginSupported ? (
-          user ? (
-            <Button onClick={onLogout} label="Log out" variant="primary" />
-          ) : (
-            <Button onClick={onLogin} label="Log in" variant="primary" />
-          )
+      {isLoginSupported && 
+        (user ? (
+          <Button onClick={onLogout} label="Log out" variant="primary" />
         ) : (
-          <></>
-        )}
-      </div>
+          <Button onClick={onLogin} label="Log in" variant="primary" />
+        ))
+      }
     </div>
   </header>
 );

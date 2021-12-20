@@ -27,7 +27,7 @@ export default {
     commonjs(),
     image({
       extensions: /\.(png|jpg|jpeg|gif|svg)$/,
-      limit: 10000,
+      limit: 1000000,
     }),
     typescript({ useTsconfigDeclarationDir: true }),
     postcss({
