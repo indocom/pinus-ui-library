@@ -7,6 +7,7 @@ import Input from "./components/Input";
 import Text from "./components/Text";
 import TextArea from "./components/TextArea";
 import Banner from "./components/Banner";
+import Footer from "./components/Footer"
 
 export {
   Button,
@@ -18,4 +19,5 @@ export {
   Input,
   Text,
   TextArea,
+  Footer,
 };
