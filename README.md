@@ -1,5 +1,5 @@
 # PINUS React.js UI Library
-[![npm version](https://badge.fury.io/js/survey-monkey-streams.svg)](//npmjs.com/package/pinus-ui-library)
+[![npm version](https://img.shields.io/npm/v/pinus-ui-library)](//npmjs.com/package/pinus-ui-library)
 
 React.js UI Components Library of PINUS
 
