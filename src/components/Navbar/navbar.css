@@ -1,0 +1,8 @@
+.navbarHeading {
+    margin: 0 0 10px 0;
+}
+
+.navbarLink:hover > p {
+    color: red !important;
+    transition: 0.3s;
+  }
