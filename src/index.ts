@@ -8,6 +8,8 @@ import Text from "./components/Text";
 import TextArea from "./components/TextArea";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer"
+import Navbar from "./components/Navbar";
+import { Content } from "./components/Navbar/Navbar";
 
 export {
   Button,
@@ -20,4 +22,9 @@ export {
   Text,
   TextArea,
   Footer,
+  Navbar
 };
+
+export type {
+  Content 
+}
