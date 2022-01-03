@@ -64,8 +64,7 @@ const Header = ({
   onLogout,
   isLoginSupported = false,
 }: HeaderProps) => {
-    // TODO: Idk why this does not work. Try uncommenting this and run pinus-client.
-    // const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     return (
       <header>
         <div className="wrapper">
@@ -96,11 +95,17 @@ const Header = ({
             </div>
           </a>
           <button
-            onClick={() => console.log('yeboi')}
+            onClick={() => setIsDrawerOpen(!isDrawerOpen)}
             className="dropdownHeader"
           >
-            <Menu size={32} />
+            <Menu size={32}/>
           </button>
+          {isDrawerOpen && (
+            <div className="header2">
+              {headers && 
+                headers.map((header) => <a href={header.url}> {header.label} </a>)}
+            </div>
+          )}
         </div>
       </header>
     ); 
