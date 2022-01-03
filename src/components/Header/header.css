@@ -1,6 +1,6 @@
 header {
   z-index: 5;
-  width: 100%;
+  width: 90vw;
 }
 
 .wrapper {
@@ -9,7 +9,42 @@ header {
   align-items: center;
   width: 100%;
   justify-content: space-between;
-  min-width: 800px;
+  background-color: transparent;
+}
+
+.wrapper2 {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+@media (max-width:1050px) {
+  .wrapper {
+    display: none;
+  }
+
+  .wrapper2 {
+    visibility: visible
+  }
+}
+
+@media (min-width:1050px) {
+  .wrapper {
+    visibility: visible;
+  }
+
+  .wrapper2 {
+    display: none;
+  }
+}
+
+.dropdownHeader {
+  outline: none !important;
+  border: none !important;
+  padding: 0 !important;
   background-color: transparent;
 }
 

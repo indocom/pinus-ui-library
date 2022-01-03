@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 
 import Button from "../Button";
 import "../global.styles.css";
 import "./header.css";
 import logo from "../../images/pinus.png";
 import Text from "../Text";
+import { Menu } from "react-feather";
 
 type header = {
   label: JSX.Element;
@@ -62,30 +63,47 @@ const Header = ({
   onLogin,
   onLogout,
   isLoginSupported = false,
-}: HeaderProps) => (
-  <header>
-    <div className="wrapper">
-      <a className="logoAndTitleWrapper" href={homeLink}>
-        <div className="logoAndTitle">
-          <img src={logoPath ? logoPath : logo} />
-          <div className="title">
-            {headerTitle}
+}: HeaderProps) => {
+    // TODO: Idk why this does not work. Try uncommenting this and run pinus-client.
+    // const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+    return (
+      <header>
+        <div className="wrapper">
+          <a className="logoAndTitleWrapper" href={homeLink}>
+            <div className="logoAndTitle">
+              <img src={logoPath ? logoPath : logo} />
+              <div className="title">
+                {headerTitle}
+              </div>
+            </div>
+          </a>
+          <div className="header">
+            {headers &&
+              headers.map((header) => <a href={header.url}>{header.label}</a>)}
           </div>
+          {isLoginSupported && 
+            (user ? (
+              <Button onClick={onLogout} label="Log out" variant="primary" />
+            ) : (
+              <Button onClick={onLogin} label="Log in" variant="primary" />
+            ))
+          }
         </div>
-      </a>
-      <div className="header">
-        {headers &&
-          headers.map((header) => <a href={header.url}>{header.label}</a>)}
-      </div>
-      {isLoginSupported && 
-        (user ? (
-          <Button onClick={onLogout} label="Log out" variant="primary" />
-        ) : (
-          <Button onClick={onLogin} label="Log in" variant="primary" />
-        ))
-      }
-    </div>
-  </header>
-);
+        <div className="wrapper2">
+          <a className="logoAndTitleWrapper" href={homeLink}>
+            <div className="logoAndTitle">
+              <img src={logoPath ? logoPath : logo} />
+            </div>
+          </a>
+          <button
+            onClick={() => console.log('yeboi')}
+            className="dropdownHeader"
+          >
+            <Menu size={32} />
+          </button>
+        </div>
+      </header>
+    ); 
+  }
 
 export default Header;
