@@ -47,7 +47,7 @@ header {
 }
 
 .header > a > p {
-  display: inline;
+  display: inline !important;
 }
 
 .header > a > p:hover {
