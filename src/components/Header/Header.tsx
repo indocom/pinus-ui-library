@@ -100,13 +100,13 @@ const Header = ({
           >
             <Menu size={32}/>
           </button>
-          {isDrawerOpen && (
+        </div>
+        {isDrawerOpen && (
             <div className="header2">
               {headers && 
                 headers.map((header) => <a href={header.url}> {header.label} </a>)}
             </div>
           )}
-        </div>
       </header>
     ); 
   }
