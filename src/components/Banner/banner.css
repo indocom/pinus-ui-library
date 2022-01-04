@@ -1,19 +1,22 @@
 .banner--wrapper {
     padding:0px;
     width:100vw;
+    overflow-x: hidden;
+    height:100vh;
     display:flex;
     justify-content: center;
     justify-items:center;
     position:relative;
+    object-fit: cover;
 }
 
 .banner--backgroundImage {
-    width: 100%;
-    height: auto;
+    min-width: 100vw;
     justify-content:center;
     justify-items:center;
     overflow:hidden;
-    filter:brightness(50%)
+    filter:brightness(50%);
+    object-fit:cover;
 }
 
 .banner--title {
@@ -22,6 +25,7 @@
     top: 45%;
     left:50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .banner--subheader {
