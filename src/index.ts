@@ -9,7 +9,7 @@ import TextArea from "./components/TextArea";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer"
 import Navbar from "./components/Navbar";
-import { Content } from "./components/Navbar/Navbar";
+import type { Content } from "./components/Navbar";
 
 export {
   Button,
@@ -26,5 +26,5 @@ export {
 };
 
 export type {
-  Content 
+  Content
 }
