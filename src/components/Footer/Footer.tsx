@@ -66,7 +66,7 @@ const Footer: React.FC<FooterProps> = ({
       {links && 
       links.map((col:Column) => {
         return (
-          <div>
+          <div className="linksWrapper">
             <Text fontWeight="bold"> {col.title} </Text>
             <p>&nbsp;</p>
             {col.pages.map((page: Page) => {
