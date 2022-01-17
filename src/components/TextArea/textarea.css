@@ -23,10 +23,10 @@
 
 .textarea:focus {
     outline: none !important;
-    border: 0.25em solid #1E88E5;
+    border: 0.15em solid #1E88E5;
 }
 
 .textarea:invalid {
     outline: none !important;
-    border: 0.25em solid red;
+    border: 0.15em solid red;
 }
