@@ -9,6 +9,13 @@
     flex-wrap: wrap;
 }
 
+.rightSideWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1;
+}
+
 .columnWrapper {
     justify-content: space-between;
     min-width: 200px;

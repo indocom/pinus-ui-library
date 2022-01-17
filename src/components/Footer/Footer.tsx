@@ -63,24 +63,26 @@ const Footer: React.FC<FooterProps> = ({
           ©2021 Perhimpunan Indonesia NUS. All Rights Reserved.
         </Text>
       </div>
-      {links && 
-      links.map((col:Column) => {
-        return (
-          <div className="linksWrapper">
-            <Text fontWeight="bold"> {col.title} </Text>
-            <p>&nbsp;</p>
-            {col.pages.map((page: Page) => {
-              return <a href={page.link} className="footerLink"> 
-                <Text color="black" fontSize="xs">
-                  {page.title} 
-                </Text>
-              </a>
-            })}
-          </div>
-        );
-      })}
-      <div>
-        {rightSide}
+      <div className="rightSideWrapper">
+        {links && 
+        links.map((col:Column) => {
+          return (
+            <div className="linksWrapper">
+              <Text fontWeight="bold"> {col.title} </Text>
+              <p>&nbsp;</p>
+              {col.pages.map((page: Page) => {
+                return <a href={page.link} className="footerLink"> 
+                  <Text color="black" fontSize="xs">
+                    {page.title} 
+                  </Text>
+                </a>
+              })}
+            </div>
+          );
+        })}
+        <div className="linksWrapper">
+          {rightSide}
+        </div>
       </div>
     </div>
   );
