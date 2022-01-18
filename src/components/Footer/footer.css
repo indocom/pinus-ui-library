@@ -9,6 +9,15 @@
     flex-wrap: wrap;
 }
 
+.rightSideWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1;
+    flex-wrap: wrap;
+    margin-left: 10px;
+}
+
 .columnWrapper {
     justify-content: space-between;
     min-width: 200px;

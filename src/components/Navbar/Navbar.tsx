@@ -36,7 +36,7 @@ const Navbar: React.FC<NavbarProps> = ({
                 return (
                     <div className="navbarHeading">
                         <a href={content.path}>
-                            <Text fontSize="4xl" fontWeight="bold" color={color}> {content.title} </Text>
+                            <Text fontSize="3xl" fontWeight="bold" color={color}> {content.title} </Text>
                         </a>
                         {renderContents(content.children, level + 1)}
                     </div>
@@ -49,7 +49,7 @@ const Navbar: React.FC<NavbarProps> = ({
                     <div>
                         <a>{tabs}</a>
                         <a href={content.path} className="navbarLink">
-                            <Text fontSize="xl" color={color} display="inline">{tabs} {content.title} </Text>
+                            <Text fontSize="lg" color={color} display="inline">{tabs} {content.title} </Text>
                         </a>
                         {renderContents(content.children, level + 1)}
                     </div>
