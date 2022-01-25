@@ -59,8 +59,11 @@ yarn storybook
 To bundle the library using rollup:
 
 ```bash
+nvm use
 yarn build
 ```
+
+Note that the current rollup plugin only works with **Node.js <= 16.x**
 
 To publish to Chromatic, which would be run automatically when there is a new push to branch `main`:
 
