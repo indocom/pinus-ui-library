@@ -7,7 +7,7 @@ import image from "rollup-plugin-img";
 
 const packageJson = require("./package.json");
 
-export default {
+export default [{
   input: "src/index.ts",
   output: [
     {
@@ -34,4 +34,5 @@ export default {
       extensions: [".css"],
     }),
   ],
-};
+}
+];
