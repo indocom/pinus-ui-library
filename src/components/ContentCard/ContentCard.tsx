@@ -13,6 +13,11 @@ export interface ContentCardProps {
   description: string;
 
   /**
+   * From who
+   */
+  from: string;
+
+  /**
    * Link to full content referenced by ContentCard
    */
   hyperlink: string;
@@ -38,6 +43,7 @@ const ContentCard = ({
   imgAlt,
   title,
   description,
+  from,
   hyperlink,
   bgImage = "https://www.publicdomainpictures.net/pictures/210000/nahled/paper-texture-crean-background.jpg",
 }: ContentCardProps) => {
@@ -58,6 +64,9 @@ const ContentCard = ({
       </div>
       <div className={'description'}>
         {description}
+      </div>
+      <div className={'from'}>
+        {from}
       </div>
       <div className={'hyperlink'}>
         <a href={hyperlink}>{"Read More >>>"}</a>
