@@ -55,7 +55,7 @@ const ContentCard = ({
       <div className={'image'}>
       {
         image
-        ? <img src={image} alt={imgAlt}/>
+        ? <img className={'imgcard'} src={image} alt={imgAlt}/>
         : <></>
       }
       </div>
