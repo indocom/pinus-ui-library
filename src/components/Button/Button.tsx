@@ -1,4 +1,6 @@
-import React, { ReactElement } from "react";
+import React from "react";
+import Text from "../Text";
+
 import "./button.css";
 import "../global.styles.css";
 export interface ButtonProps {
@@ -31,6 +33,19 @@ export interface ButtonProps {
    */
   loadingLabel?: string;
   /**
+   * Text font sizes
+   */
+   fontSize?:
+   | "xs"
+   | "sm"
+   | "base"
+   | "lg"
+   | "xl"
+   | "2xl"
+   | "3xl"
+   | "4xl"
+   | "5xl";
+  /**
    * Optional click handler
    */
   onClick?: () => void;
@@ -45,6 +60,7 @@ const Button = ({
   label,
   labelColor,
   isLoading = false,
+  fontSize = "lg",
   ...props
 }: ButtonProps) => {
   if (isLoading) {
@@ -61,12 +77,16 @@ const Button = ({
       {
         isLoading ? 
         (
-          <div style={{display: "flex", alignItems: "center", fontSize: "1em", lineHeight: "normal"}}>
-            <div className="loader" style={props.loadingLabel ? {marginRight: "0.5rem"} : {fontSize: "1rem"}}/>
-            {props.loadingLabel}
+          <div style={{display: "flex", alignItems: "center"}}>
+            <div className={`loader loader--${fontSize}`} style={props.loadingLabel ? {marginRight: "0.5rem"} : {fontSize: "1rem"}}/>
+            <Text color="#ffffff" fontWeight="bold" fontSize={fontSize}>
+              {props.loadingLabel}
+            </Text>
           </div>
         ) : (
-          label
+          <Text color="#ffffff" fontWeight="bold" fontSize={fontSize}>
+            {label}
+          </Text>
         )
       }
     </button>
