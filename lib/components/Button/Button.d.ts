@@ -23,6 +23,14 @@ export interface ButtonProps {
      */
     disabled?: boolean;
     /**
+     * Is this button in loading state?
+     */
+    isLoading?: boolean;
+    /**
+     * Button contents if in loading state
+     */
+    loadingLabel?: string;
+    /**
      * Optional click handler
      */
     onClick?: () => void;
@@ -30,6 +38,6 @@ export interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-declare const Button: ({ variant, bgColor, label, labelColor, ...props }: ButtonProps) => JSX.Element;
+declare const Button: ({ variant, bgColor, label, labelColor, isLoading, ...props }: ButtonProps) => JSX.Element;
 export default Button;
 //# sourceMappingURL=Button.d.ts.map
