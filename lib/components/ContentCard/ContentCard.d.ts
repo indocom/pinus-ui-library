@@ -10,6 +10,10 @@ export interface ContentCardProps {
      */
     description: string;
     /**
+     * From who
+     */
+    from: string;
+    /**
      * Link to full content referenced by ContentCard
      */
     hyperlink: string;
@@ -26,6 +30,6 @@ export interface ContentCardProps {
      */
     bgImage?: string;
 }
-declare const ContentCard: ({ image, imgAlt, title, description, hyperlink, bgImage, }: ContentCardProps) => JSX.Element;
+declare const ContentCard: ({ image, imgAlt, title, description, from, hyperlink, bgImage, }: ContentCardProps) => JSX.Element;
 export default ContentCard;
 //# sourceMappingURL=ContentCard.d.ts.map
