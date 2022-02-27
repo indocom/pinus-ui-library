@@ -47,3 +47,17 @@ LoadingWithLabel.args = {
   loadingLabel: "Loading...",
   label: "This should not be shown"
 };
+
+export const SmallButton = Template.bind({});
+SmallButton.args = {
+  variant: "primary",
+  fontSize: "sm",
+  label: "Button"
+};
+
+export const BigButton = Template.bind({});
+BigButton.args = {
+  variant: "primary",
+  fontSize: "lg",
+  label: "Button"
+};
