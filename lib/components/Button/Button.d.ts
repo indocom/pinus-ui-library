@@ -31,6 +31,10 @@ export interface ButtonProps {
      */
     loadingLabel?: string;
     /**
+     * Text font sizes
+     */
+    fontSize?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl";
+    /**
      * Optional click handler
      */
     onClick?: () => void;
@@ -38,6 +42,6 @@ export interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-declare const Button: ({ variant, bgColor, label, labelColor, isLoading, ...props }: ButtonProps) => JSX.Element;
+declare const Button: ({ variant, bgColor, label, labelColor, isLoading, fontSize, ...props }: ButtonProps) => JSX.Element;
 export default Button;
 //# sourceMappingURL=Button.d.ts.map
