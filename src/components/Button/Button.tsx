@@ -78,7 +78,7 @@ const Button = ({
         isLoading ? 
         (
           <div style={{display: "flex", alignItems: "center"}}>
-            <div className={`loader loader--${fontSize}`} style={props.loadingLabel ? {marginRight: "0.5rem"} : {fontSize: "1rem"}}/>
+            <div className={`loader loader--${fontSize}`} style={props.loadingLabel ? {marginRight: "0.5rem"} : {}}/>
             <Text color="#ffffff" fontWeight="bold" fontSize={fontSize}>
               {props.loadingLabel}
             </Text>
