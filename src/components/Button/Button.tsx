@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import "./button.css";
 import "../global.styles.css";
 export interface ButtonProps {
@@ -23,6 +23,14 @@ export interface ButtonProps {
    */
   disabled?: boolean;
   /**
+   * Is this button in loading state? 
+   */
+  isLoading?: boolean;
+  /**
+   * Button contents if in loading state
+   */
+  loadingLabel?: string;
+  /**
    * Optional click handler
    */
   onClick?: () => void;
@@ -36,8 +44,13 @@ const Button = ({
   bgColor,
   label,
   labelColor,
+  isLoading = false,
   ...props
 }: ButtonProps) => {
+  if (isLoading) {
+    props.disabled = true;
+  }
+
   return (
     <button
       type="button"
@@ -45,7 +58,17 @@ const Button = ({
       style={{ color: labelColor, backgroundColor: bgColor }}
       {...props}
     >
-      {label}
+      {
+        isLoading ? 
+        (
+          <div style={{display: "flex", alignItems: "center", fontSize: "1em", lineHeight: "normal"}}>
+            <div className="loader" style={props.loadingLabel ? {marginRight: "0.5rem"} : {fontSize: "1rem"}}/>
+            {props.loadingLabel}
+          </div>
+        ) : (
+          label
+        )
+      }
     </button>
   );
 };
