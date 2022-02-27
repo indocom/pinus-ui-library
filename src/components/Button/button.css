@@ -26,19 +26,11 @@ button[disabled] {
 }
 
 .loader {
+  box-sizing: border-box;
   animation: spin 1s linear infinite;
 }
 
 .loader--xs, .loader--sm {
-  border: 0.125rem solid #f3f3f3; /* Light grey */
-  border-top: 0.125rem solid #3498db; /* Blue */
-  border-right: 0.125rem solid #3498db; /* Blue */
-  border-radius: 50%;
-  width: 0.5rem;
-  height: 0.5rem;
-}
-
-.loader--base, .loader--lg, .loader--xl, .loader--2xl {
   border: 0.25rem solid #f3f3f3; /* Light grey */
   border-top: 0.25rem solid #3498db; /* Blue */
   border-right: 0.25rem solid #3498db; /* Blue */
@@ -47,13 +39,22 @@ button[disabled] {
   height: 0.75rem;
 }
 
-.loader--3xl, .loader--4xl, .loader--5xl {
-  border: 0.5rem solid #f3f3f3; /* Light grey */
-  border-top: 0.5rem solid #3498db; /* Blue */
-  border-right: 0.5rem solid #3498db; /* Blue */
+.loader--base, .loader--lg, .loader--xl {
+  border: 0.25rem solid #f3f3f3; /* Light grey */
+  border-top: 0.25rem solid #3498db; /* Blue */
+  border-right: 0.25rem solid #3498db; /* Blue */
   border-radius: 50%;
   width: 1rem;
   height: 1rem;
+}
+
+.loader--2xl, .loader--3xl, .loader--4xl {
+  border: 0.25rem solid #f3f3f3; /* Light grey */
+  border-top: 0.25rem solid #3498db; /* Blue */
+  border-right: 0.25rem solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 @keyframes spin {
