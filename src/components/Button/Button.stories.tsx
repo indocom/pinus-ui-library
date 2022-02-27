@@ -32,3 +32,18 @@ Disabled.args = {
   disabled: true,
   label: "Button",
 };
+
+export const Loading = Template.bind({});
+Loading.args = {
+  variant: "primary",
+  isLoading: true,
+  label: "This should not be shown"
+};
+
+export const LoadingWithLabel = Template.bind({});
+LoadingWithLabel.args = {
+  variant: "primary",
+  isLoading: true,
+  loadingLabel: "Loading...",
+  label: "This should not be shown"
+};
