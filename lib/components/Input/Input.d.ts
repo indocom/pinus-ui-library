@@ -1,7 +1,7 @@
 import React, { HTMLInputTypeAttribute } from "react";
 import "./input.css";
 import "../global.styles.css";
-export interface InputProps {
+export interface InputProps extends React.ComponentProps<"input"> {
     /**
      * The id of the input element. Use this prop to make value and placeholder accessible for screen readers.
      */

@@ -1,7 +1,7 @@
 import React from "react";
 import "./textarea.css";
 import "../global.styles.css";
-export interface TextAreaProps {
+export interface TextAreaProps extends React.ComponentProps<"textarea"> {
   /**
    * The id of the textarea element. Use this prop to make value and placeholder accessible for screen readers.
    */
@@ -16,7 +16,7 @@ export interface TextAreaProps {
    * Name attribute of the textarea element.
    */
   name?: string;
-
+  type?:HTMLTextAreaElement;
   /**
    * The value in the textarea element
    */
@@ -51,6 +51,7 @@ export interface TextAreaProps {
    * Indicate whether the input is mandatory or not
    */
    isRequired?: boolean;
+
 }
 
 /**

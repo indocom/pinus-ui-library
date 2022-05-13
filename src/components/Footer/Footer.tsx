@@ -60,7 +60,7 @@ const Footer: React.FC<FooterProps> = ({
           {logoTitle}
         </div>
         <Text color="gray">
-          ©2021 Perhimpunan Indonesia NUS. All Rights Reserved.
+          ©{new Date().getFullYear()} Perhimpunan Indonesia NUS. All Rights Reserved.
         </Text>
       </div>
       <div className="rightSideWrapper">
