@@ -51,16 +51,6 @@ export interface TextAreaProps extends React.ComponentProps<"textarea"> {
    * Indicate whether the input is mandatory or not
    */
    isRequired?: boolean;
-  
-   /**
-    * Indicate whether the text area is disabled
-    */
-   disabled?:boolean;
-
-   /**
-    * Indicate whether text area is read only
-    */
-   readOnly?:boolean;
 
 }
 
